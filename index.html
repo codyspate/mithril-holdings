@@ -17,26 +17,30 @@
 
         body {
             margin: 0;
-            position: relative;
-        }
-
-        main {
             color: #090909;
             background-color: #dbf3ff;
             height: 100%;
             width: 100%;
             display: flex;
+            flex-direction: column;
+        }
+
+        body>* {
+            flex-shrink: 0;
+            display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        main {
+            flex-grow: 1;
+        }
+
         .twoSeven {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            margin: auto 0;
-            text-align: center;
+            flex-grow: 0;
             color: #d1e2eb;
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -45,7 +49,9 @@
     <main>
         <h1>Mithril Holdings</h1>
     </main>
-    <div class="twoSeven">27</div>
+    <div class="twoSeven">
+        <p>27</p>
+    </div>
 </body>
 
 </html>

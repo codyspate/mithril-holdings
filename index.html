@@ -18,7 +18,6 @@
         body {
             margin: 0;
             color: #090909;
-            background-color: #dbf3ff;
             height: 100%;
             width: 100%;
             display: flex;
@@ -36,9 +35,14 @@
             flex-grow: 1;
         }
 
+        .logo img {
+            object-fit: cover;
+            height: 20rem;
+        }
+
         .twoSeven {
             flex-grow: 0;
-            color: #d1e2eb;
+            color: #e9e9e9;
             display: flex;
             align-items: center;
         }
@@ -47,7 +51,9 @@
 
 <body>
     <main>
-        <h1>Mithril Holdings</h1>
+        <div class="logo">
+            <img src="/static/logo.png" alt="Mithril Holdings logo" />
+        </div>
     </main>
     <div class="twoSeven">
         <p>27</p>
